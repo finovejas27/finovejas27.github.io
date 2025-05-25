@@ -63,7 +63,6 @@ div.smalltext{
     font-weight: 500;
     font-style: normal;
     line-height: 1.4;
-    background-color:#707070b3;
 }
 
 div.textright{
@@ -127,6 +126,10 @@ div.neutral{background-color: #02111b;}
 
 div.mt{
     margin-top:100px;
+}
+
+div.mts{
+    margin-top: 50px;
 }
 
 div.mb{
