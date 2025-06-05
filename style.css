@@ -37,6 +37,25 @@ img, video {
     z-index: -1; 
 } 
 
+div.fullimg{
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Prevents distortion */
+    display: block; /* Removes default inline spacing */
+}
+
+div.medimg{
+    width: 800px;
+}
+
+div.smallimg{
+    width: 500px;
+}
+
+div.vsmallimg{
+    width: 200px;
+}
+
 
 /* Body text */
 
@@ -224,6 +243,7 @@ div.centretext{
     top: 10px;
     right: 10px;
   }
+  
 
 
 
