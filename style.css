@@ -345,22 +345,6 @@ div.centretext{
     left: 1000px;
   }
 
-  div.glitch-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0; /* Starts hidden */
-    pointer-events: none;
-    z-index: 9999;
-}
-div.glitch-overlay.active {
-    opacity: 70%;
-    display: block;
-    /* animation: glitchEffect 0.1s ease-in-out; Optional glitch animation */
-}
-
 
 
   
