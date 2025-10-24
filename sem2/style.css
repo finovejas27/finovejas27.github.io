@@ -1,54 +1,311 @@
 body{
-    background-color:black
+    background-color:#fff7d2
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; */
 }
 
 
+
+/* Text */
 h1.title{
     font-size: 100px;
-    color: #ffffff;
-    font-family: "fit-extra-wide", sans-serif;
-    font-weight: 400;
+    color: #000000;
+    font-family: "strelka", sans-serif;
+    font-weight: 800;
     font-style: normal;
-    word-spacing: 10px;
-    letter-spacing: 2px;
-    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    /* border: 2px solid red; */
+    position: absolute;
+    margin-top: 400px;
+    background-color: #fff7d2;
 }
 
 h2.subheader{
-    font-size: 55px;
-    color: #34e420;
-    font-family: "fit-extra-wide", sans-serif;
-    font-weight: 400;
+    font-size: 60px;
+    color: #c833e9;
+    font-family: "strelka", sans-serif;
+    font-weight: 800;
     font-style: normal;
-    word-spacing: 5px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     text-align: center;
+    /* position: relative; */
+    z-index: 10;
+    /* border: 2px solid red; */
+    padding: 40px;
+    /* background-color: rgb(255, 247, 210); */
 }
 
 div.bodytext{
-    font-size: 12px;
-    color: #ffffff;
-    font-family: "kallisto", sans-serif;
-    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+    font-family: "courier-std", monospace;
+    font-weight: 400;
     font-style: normal;
     text-align: center;
-    border-top: 1.5px solid #ffffff;
-    border-bottom: 1.5px solid #ffffff;
+    border-top: 1.5px solid #000000;
+    border-bottom: 1.5px solid #000000;
     padding: 20px 0;
     margin: 0 80px;
 }
 
+div.mediumtext{
+    font-size: 40px;
+    color: #000000;
+    font-family: "strelka", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 40px;
+    /* position: sticky; */
+    z-index: 10;
+}
+
+
+
+/* Extra text */
+div.comment-title{
+    font-size: 18px;
+    color: #000000;
+    font-family: "courier-std", monospace;
+    font-weight: 400;
+    font-style: normal;
+    padding: 5px 0;
+    margin-left: 20px;
+}
+
+div.comments{
+    font-size: 14px;
+    color: #000000;
+    font-family: "courier-std", monospace;
+    font-weight: 400;
+    font-style: normal;
+    padding: 5px 0;
+    margin-left: 20px;
+}
+
+div.comment-bubble{
+    background-color: #c833e9b8;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.318);
+}
+
 div.cta{
-    font-size: 12px;
-    color: #34e420;
-    font-family: "kallisto", sans-serif;
-    font-weight: 500;
+    font-size: 18px;
+    color: #c833e9;
+    font-family: "courier-std", monospace;
+    font-weight: 400;
     font-style: normal;
     text-align: center;
     display: inline-block;
-    border-bottom: 1.5px solid #34e420;
+    border-bottom: 1.5px solid #c833e9;
 }
 
+div.footnote{
+    font-size: 10px;
+    color: #000000;
+    font-family: "courier-std", monospace;
+    font-weight: 400;
+    font-style: normal;
+    border-top: 1.5px solid #000000;
+    padding: 5px 5px;
+    margin-top: 40px;
+    display: inline-block;   
+}
+
+div.footnotes{
+    text-align: right;
+}
+
+
+
+/* Containers */
 div.container{
+    flex-wrap: wrap;
+    display: flex;
+    /* border: 2px solid red; */
+}
+
+
+div.container-title{
+    height: 660px;
+    padding: 20px;
+    flex-direction: column;
+    display: flex;
+}
+
+div.container-textcentre{
     text-align: center;
+    /* border: 2px solid rgb(30, 0, 255); */
+}
+
+
+
+/* Double page scroll */
+div.page {
+  height:100vh;
+  overflow:scroll;
+}
+
+/* div.debug {
+  outline:1px solid red;
+} */
+
+
+
+/* Sticky */
+.sticky {
+  position: sticky;
+  top: 40px; /* or adjust */
+  height: 200vh;
+  /* border: 2px solid rgb(30, 0, 255); */
+}
+
+.sticky-box {
+  position: sticky;
+  top: 40px;
+  /* border: 2px solid red; */
+  height: fit-content;  /* shrink to fit content */
+}
+
+div.stickytitle {
+  position: sticky;
+  top:10px;
+}
+
+
+
+/* boxes -> for quotes */ /* add more as you go */ 
+div.box{
+    width: 300px;
+    padding: 2px;
+    color: #000000;
+    font-size: 50px;
+    font-family: "strelka", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    margin-left: 150px;
+    margin-top: 80px;
+    text-transform: uppercase;
+}
+
+div.box2{
+    width: 300px;
+    padding: 2px;
+    color: #c833e9;
+    font-size: 50px;
+    font-family: "strelka", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    margin-left: 300px;
+    text-transform: uppercase;
+}
+
+
+
+/* Margins */ /* add more margins for boxes as you go */
+div.margin-lauto{
+    margin-left: auto;
+}
+
+div.ml{
+    margin-left: 100px;
+}
+
+div.margin-rauto{
+    margin-right: auto;
+}
+
+div.marginl5{
+    margin-left: 5%;
+}
+
+div.marginr5{
+    margin-right: 5%;
+}
+
+div.margin150{
+    margin-top: 150px;
+    /* margin-bottom: 150px; */
+}
+
+div.margin50{
+    margin-top: 50px;
+}
+
+
+
+/* Background colours */
+div.bg-pink{
+    background-color: #c833e9;
+}
+
+div.bg-white{
+    background-color: #ffffff;
+}
+
+
+
+/* Images */
+div.bgimg{
+    background-image: url(Images/frontpage.png);
+    width: 100vw;      /* makes it fill the screen */
+    background-repeat: no-repeat; /* prevents tiling */
+    background-position: center;  /* centers the image */
+    /* width: 100vw;      /* full viewport width */
+    height: 600px;
+    margin-top: 100px;
+}
+
+div.image-box {
+  width: 600px;
+  height: 400px;
+  overflow: hidden;         /* hides extra part of image */
+}
+
+div.image-box img {
+  width: 100%;       /* fills width of container */
+  height: 100%;      /* fills height */
+  object-fit: contain; /* keeps aspect ratio, no stretching */
+  /* border: 2px solid rgb(30, 0, 255); */
+}
+
+div.image-boxlarge {
+  width: 400px;
+  height: 300px;
+  object-fit: contain;         /* hides extra part of image */
+}
+
+
+
+
+/* Widths */
+div.width25{
+    width: 25%;
+}
+
+div.width40{
+    width: 40%;
+}
+
+div.width50{
+    width: 50%;
+}
+
+div.width10{
+    width: 10%;
+}
+
+div.width80{
+    width: 80%;
 }
