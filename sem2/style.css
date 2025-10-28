@@ -128,6 +128,17 @@ div.footnotes{
     text-align: right;
 }
 
+div.podcast{
+    font-size: 16px;
+    color: #000000;
+    font-family: "courier-std", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    border-top: 1.5px solid #000000;
+    padding: 20px 0;
+}
+
 
 
 /* Containers */
@@ -135,6 +146,14 @@ div.container{
     flex-wrap: wrap;
     display: flex;
     /* border: 2px solid red; */
+}
+
+
+div.container img{
+     margin: 20px; /* or margin-top, margin-left, etc. */
+    width: auto;
+    height: auto;
+    display: block;
 }
 
 
@@ -191,7 +210,7 @@ div.page {
 
 div.stickytitle {
   position: sticky;
-  top:10px;
+  top: 0px;
 }
 
 
@@ -250,6 +269,10 @@ div.margin150{
     /* margin-bottom: 150px; */
 }
 
+div.margin200top{
+    margin-top: 200px;
+}
+
 div.margin50{
     margin-top: 50px;
 }
@@ -260,6 +283,7 @@ div.marginb10{
 
 
 
+
 /* Background colours */
 div.bg-pink{
     background-color: #c833e9;
@@ -267,6 +291,10 @@ div.bg-pink{
 
 div.bg-lightpink{
     background-color: #c833e957;
+}
+
+div.bg-plain{
+    background-color: #fff7d2;
 }
 
 
@@ -302,20 +330,44 @@ div.image-boxlarge {
   object-fit: contain;         /* hides extra part of image */
 }
 
-.fullheight-image {
-  height: 100vh;       /* fills screen height */
-  width: auto;         /* keeps original proportions */
-  object-fit: contain; /* no cropping or stretching */
-  display: block;      /* removes inline gap */
-  max-width: 100vw;    /* prevents horizontal scroll */
-  margin: 0 auto;      /* centers horizontally */
+img.fullscreen {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;   /* fills space but may crop parts */
+  display: block;
 }
 
+/* div.image-container {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("Images/takeoverfyer.jpg");
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+} */
 
+/* img.fullheight {
+  height: 100vh;         
+  width: auto;           
+  object-fit: contain;   
+  display: block;        
+  margin: 0 auto;        
+} */
 
+.image-container {
+  display: flex;
+  justify-content: flex-start;  /* ⬅️ aligns image to the left */
+  align-items: center;          /* centers vertically (optional) */
+  height: 100vh;
+  overflow: hidden;
+}
 
-
-
+img.fullheight {
+  height: 100vh;      /* fills full screen height */
+  width: auto;        /* keeps proportions */
+  object-fit: contain;
+  display: block;
+}
 
 
 
@@ -342,4 +394,47 @@ div.width10{
 
 div.width80{
     width: 80%;
+}
+
+
+
+
+/* For pop up flyer */
+.flyer {
+  position: fixed;
+  bottom: 20px;      /* stays at bottom */
+  max-width: 200px;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.flyer.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.flyer img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.flyer button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 22px;
+  text-align: center;
 }
