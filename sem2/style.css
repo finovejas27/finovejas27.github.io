@@ -401,16 +401,16 @@ div.width80{
 
 /* For pop up flyer */
 .flyer {
-  position: fixed;
-  bottom: 20px;      /* stays at bottom */
+  position: fixed;       /* stays in the corner of the viewport */
+  bottom: 20px;
+  right: 20px;
   max-width: 200px;
   z-index: 1000;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  opacity: 0;
+  opacity: 0;            /* hidden initially */
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
 
 .flyer.show {
   opacity: 1;
